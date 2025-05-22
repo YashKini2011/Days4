@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Yash Kini - Computer Engineering Portfolio, Education, Goals, Achievements" />
+  <meta name="author" content="Yash Kini" />
+  <meta property="og:title" content="Yash Kini's Portfolio" />
+  <meta property="og:image" content="https://example.com/path-to-your-image.jpg" />
+  <meta property="og:description" content="Personal portfolio showcasing my journey in computer engineering." />
+  <meta name="theme-color" content="#3f51b5" />
+  <link rel="icon" href="favicon.ico" />
+  <title>Yash Kini's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+ <link rel="manifest" href="/site.webmanifest">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <title>Redirect to Shop</title>
+<!-- 
+    <title>Redirecting...</title>
+    <script>
+        window.location.href = "shop.html";
+    </script> -->
+    
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f0f4ff;
+      color: #1a237e;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    header {
+      background: linear-gradient(90deg, #64b5f6, #3f51b5);
+      color: white;
+      padding: 2em 1em;
+      text-align: center;
+      position: relative;
+    }
+    
+    #darkModeToggle {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+      padding: 0.5em 1em;
+      border: none;
+      background: #ffffff33;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    nav {
+      background: white;
+      padding: 1em 0;
+      position: sticky;
+      top: 0;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+    
+    .nav-links {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .nav-links a {
+      margin: 0 1.2em;
+      text-decoration: none;
+      color: #3f51b5;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #1a237e;
+      transform: translateY(-2px);
+    }
+    
+    section {
+      padding: 2em;
+      max-width: 900px;
+      margin: 2em auto;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    
+    section:hover {
+      transform: scale(1.01);
+    }
+    
+    h2 {
+      color: #3f51b5;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    
+    img.profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1.5em auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    ul {
+      padding-left: 1.5em;
+    }
+    
+    li {
+      margin-bottom: 0.8em;
+    }
+    
+    footer {
+      background: linear-gradient(90deg, #64b5f6, #3f51b5);
+      color: white;
+      padding: 2em 0;
+      text-align: center;
+      margin-top: 3em;
+    }
+    
+    footer a {
+      color: #bbdefb;
+    }
+    
+    footer a:hover {
+      color: #e3f2fd;
+    }
+    
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eeeeee;
+    }
+    
+    body.dark-mode section {
+      background-color: #1e1e1e;
+    }
+    
+    body.dark-mode nav {
+      background-color: #2c2c2c;
+    }
+    
+    body.dark-mode .nav-links a {
+      color: #bbdefb;
+    }
+    
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Video Section */
+    #video {
+      text-align: center;
+      padding: 2em;
+      border-radius: 12px;
+      margin: 2em auto;
+      max-width: 900px;
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1.5em;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+    }
+    
+    /* Location Section */
+    #location {
+      padding: 2em 1.5em;
+      text-align: center;
+      margin: 2em auto;
+      border-radius: 12px;
+      max-width: 900px;
+    }
+    
+    #location h2 {
+      font-size: 2rem;
+      margin-bottom: 1em;
+    }
+    
+    #location p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5em;
+    }
+    
+    .map-container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Contact Form */
+    #contact {
+      padding: 3em 1.5em;
+      text-align: center;
+      margin: 2em auto;
+      border-radius: 12px;
+      max-width: 900px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    }
+    
+    #contact h2 {
+      font-size: 2rem;
+      margin-bottom: 1em;
+    }
+    
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5em;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      color: #333;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 0.8em;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    input:focus, textarea:focus {
+      border-color: #4caf50;
+      outline: none;
+    }
+    
+    textarea {
+      resize: vertical;
+    }
+    
+    button[type="submit"] {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 0.8em 2em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    button[type="submit"]:hover {
+      background-color: #45a049;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 21px;
+      cursor: pointer;
+      padding: 1em;
+      margin: 0 auto;
+    }
+    
+    .hamburger span {
+      display: block;
+      height: 3px;
+      width: 100%;
+      background-color: #3f51b5;
+      transition: all 0.3s ease;
+    }
+    
+    /* Scroll to Top Button */
+    #scrollToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #3f51b5;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.5em;
+      display: none;
+      z-index: 99;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    
+    #scrollToTop:hover {
+      background: #1a237e;
+      transform: translateY(-2px);
+    }
+    
+    /* Loading Animation */
+    .loader-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #f0f4ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s, visibility 0.5s;
+    }
+    
+    .loader-wrapper.dark-mode {
+      background: #121212;
+    }
+    
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid #3f51b5;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+    
+    @keyframes rotation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hamburger {
+        display: flex;
+      }
+      
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      
+      .nav-links.active {
+        display: flex;
+      }
+      
+      .nav-links a {
+        margin: 0.5em 0;
+        padding: 0.5em;
+      }
+      
+      section {
+        padding: 1.5em;
+        margin: 1em auto;
+      }
+      
+      iframe {
+        width: 100%;
+        height: auto;
+        min-height: 250px;
+      }
+      
+      .profile-pic {
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+    /* Style for the shop button */
+        .shop-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #4CAF50; /* Green color matching your site */
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        /* Hover effect */
+        .shop-button:hover {
+            background-color: #45a049; /* Darker green */
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Active/click effect */
+        .shop-button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+        }
+        
+        /* Optional: Add an icon */
+        .shop-button i {
+            margin-right: 8px;
+        }
+        
+        /* Container to center the button on page */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+    
+  </style>
+</head>
+<body>
+  <!-- Loading Animation -->
+  <div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <p class="typewriter"></p>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#goals">Goals</a>
+      <a href="#personal">Personal Side</a>
+       <!-- <p>If you are not redirected automatically, <a href="shop.html">click here</a>.</p> -->
+        <!-- As a link -->
+<!-- <a href="shop.html">Go to Shop</a> -->
+
+<!-- As a button -->
+<!-- <button onclick="window.locati on.href='shop.html'">Visit Shop</button> -->
+      <!-- class="button-container"> -->
+        <!-- As a styled button -->
+        <button class="shop-button" onclick="window.location.href='shop.html'">
+            <i class="fas fa-shopping-cart"> Visit Our Shop</i> 
+        </button>
+
+    </div>
+  </nav>
+
+  <section id="welcome" class="reveal">
+    <h2>Hello! 👋</h2>
+    <img src="yash.jpg" alt="Portrait of Yash Kini" class="profile-pic">
+    <p style="text-align:center;">
+      I'm <strong>Yash Kini</strong>, a computer engineering enthusiast with a deep passion for tech. This portfolio isn't just a collection of projects—it's a window into my personal journey, my technical growth, and my vision for the future.
+
+      Since beginning my academic path in computer engineering, I've found joy not only in understanding the theories behind technology but also in putting them into action. My interest spans a wide array of fields, from software development to immersive technologies like AR/VR. I see myself not just as a learner, but as a creator and problem-solver eager to make an impact.
+    </p>
+  </section>
+
+  <section id="about" class="reveal">
+    <h2>About Me</h2>
+    <ul>
+      <li><strong>Name:</strong> Yash Kini</li>
+      <li><strong>Location:</strong> Palghar, Maharashtra, India</li>
+      <li><strong>Education:</strong> Pursuing Computer Engineering at St. John College of Engineering and Management</li>
+      <li><strong>Languages Known:</strong> C, SQL, Java</li>
+    </ul>
+  </section>
+
+  <section id="video" class="reveal">
+    <h2>Video</h2>
+    <div class="video-container">
+      <iframe width="700" height="500" 
+          src="https://www.youtube.com/embed/hI9HQfCAw64" 
+          title="London Walk 4K HDR | Stunning Tour from Southbank to Big Ben and Covent Garden" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen
+          aria-label="YouTube video player">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="achievements" class="reveal">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Certified in AR-VR Development</li>
+      <li>Developed AR-VR projects</li>
+    </ul>
+  </section>
+
+  <section id="goals" class="reveal">
+    <h2>Future Goals</h2>
+    <p>My goal is to become an Android Developer.</p>
+    <p>My mission is to solve real-world problems using technology and inspire the next generation of developers.</p>
+  </section>
+
+  <section id="personal" class="reveal">
+    <h2>More About Me</h2>
+    <ul>
+      <li><strong>Hobbies:</strong> Reading, Coding, Cricket</li>
+      <li><strong>Role Models:</strong> Elon Musk</li>
+      <li><strong>Books:</strong> "Atomic Habits"</li>
+      <li><strong>Websites:</strong> freeCodeCamp, Medium</li>
+      <li><strong>Startups I admire:</strong> CRED</li>
+      <li><strong>Volunteering Experience:</strong> Tech fest organizer & mentor</li>
+    </ul>
+  </section>
+
+  <section id="location" class="reveal">
+    <h2>My Location</h2>
+    <p>Currently located in Wada, Palghar, Maharashtra, India.</p>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6889.349367585973!2d72.76604926653468!3d19.693692887952857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be71cc292953111%3A0x78545121a702a7fe!2sBajpai%20Wada%20Rd%2C%20Vishnu%20Nagar%2C%20Palghar%2C%20Maharashtra%2040104!5e0!3m2!1sen!2sin!4v1747735842424!5m2!1sen!2sin" 
+              width="600" 
+              height="450" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              aria-label="Google Maps location">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <form action="submit_form.php" method="POST" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Yash Kini | Email: <a href="mailto:123yash2071@sjcem.edu.in">123yash2071@sjcem.edu.in</a>
+      <hr> Github-ID: <a href="mailto:YashKini2011
+yashkini2011.github.io">YashKini2011</a>
+    
+    </p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" title="Go to top">↑</button>
+
+  <script>
+    // JavaScript
+    // Smooth scroll
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        section.scrollIntoView({ behavior: 'smooth' });
+        // Close hamburger menu if open
+        navLinks.classList.remove('active');
+      });
+    });
+    
+    // Typewriter effect
+    const text = "Hi, I'm Yash Kini — future tech leader and creator 🌟";
+    let index = 0;
+    const typeTarget = document.querySelector('.typewriter');
+    
+    function typeWriter() {
+      if (index < text.length) {
+        typeTarget.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+    typeWriter();
+    
+    // Dark mode toggle
+    const toggle = document.getElementById('darkModeToggle');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      // Update loader wrapper if visible
+      const loaderWrapper = document.querySelector('.loader-wrapper');
+      if (document.body.classList.contains('dark-mode')) {
+        loaderWrapper.classList.add('dark-mode');
+      } else {
+        loaderWrapper.classList.remove('dark-mode');
+      }
+    });
+    
+    // Reveal on scroll
+    function revealOnScroll() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const elementVisible = 100;
+    
+        if (elementTop < windowHeight - elementVisible) {
+          el.classList.add("active");
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    
+    // Hamburger menu functionality
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+    
+    // Scroll to top button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.style.display = 'block';
+      } else {
+        scrollToTopBtn.style.display = 'none';
+      }
+    });
+    
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Loading animation
+    window.addEventListener('load', function() {
+      const loaderWrapper = document.querySelector('.loader-wrapper');
+      loaderWrapper.style.opacity = '0';
+      loaderWrapper.style.visibility = 'hidden';
+      
+      // Ensure dark mode applies to loader if active
+      if (document.body.classList.contains('dark-mode')) {
+        document.querySelector('.loader-wrapper').classList.add('dark-mode');
+      }
+    });
+    
+    // Initialize dark mode if previously set
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      document.querySelector('.loader-wrapper').classList.add('dark-mode');
+    }
+    
+    // Save dark mode preference
+    toggle.addEventListener('click', () => {
+      if (document.body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+</body>
+</html>
